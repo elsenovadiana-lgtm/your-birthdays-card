@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Birthday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <div class="card-inner">
+
+    <!-- BAGIAN ATAS -->
+    <div class="card-top">
+      <h2>Happy Birthday</h2>
+      <p class="subtitle">Beryl Dwi Dewantara✨</p>
+    </div>
+
+    <!-- FOTO POLAROID -->
+    <div class="photos">
+      <div class="photo"><img src="foto/foto1.jpg"></div>
+      <div class="photo"><img src="foto/foto2.jpg"></div>
+      <div class="photo"><img src="foto/foto3.jpg"></div>
+    </div>
+
+    <!-- PESAN -->
+    <div class="card-message">
+      <p>
+        Selamat ulang tahun Yaaaa. Semoga di usia yang baru ini, segala hal baik semakin mendekat dan langkahmu selalu dimudahkan. Semoga kesehatan, ketenangan, dan semangat terus menyertaimu dalam menjalani hari-hari ke depan. 
+        
+        Terima kasih atas sikap baik dan kebersamaan yang pernah ada, meskipun sederhana. Semoga apa pun yang sedang kamu usahakan saat ini berjalan lancar dan membuahkan hasil yang terbaik. 
+
+        Semoga selalu diberi kekuatan untuk menghadapi setiap proses hidup dan tetap menjadi pribadi yang positif. Selamat bertambah usia, semoga ke depan semakin banyak hal baik yang kamu temui.✨
+      </p>
+      <p class="birthdate">22 Februari 2008</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <small>&copy; 2026 Birthday Card</small><br>
+  <small>Made with 🤍 by <a href="https://instagram.com/els3novaaa">@els3novaaa</a></small>
+</footer>
+
+<!-- ANIMASI LUCU -->
+<div class="cute-wrap">
+  <span class="cute">🎈</span>
+  <span class="cute">🎉</span>
+  <span class="cute">🎂</span>
+  <span class="cute">✨</span>
+</div>
+
+<!-- MUSIK -->
+<audio id="bgMusic" loop>
+  <source src="audio/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TOMBOL MUSIK -->
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<script>
+  const music = document.getElementById("bgMusic");
+  let playing = false;
+
+  function toggleMusic() {
+    if (!playing) {
+      music.play();
+      playing = true;
+      document.querySelector(".music-btn").innerText = "⏸️";
+    } else {
+      music.pause();
+      playing = false;
+      document.querySelector(".music-btn").innerText = "🎵";
+    }
+  }
+</script>
+
+</body>
+</html>
