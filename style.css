@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #0284c7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* PENTING */
+  padding: 20px 10px;         /* RUANG DI HP */
+}
+
+/* CARD UTAMA */
+.card {
+  background: linear-gradient(180deg, #ffffff, #f1f5f9);
+  width: 360px;
+  padding: 28px 26px;
+  border-radius: 18px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  border-top: 6px solid #2563eb;
+}
+
+/* ISI */
+.card-inner {
+  text-align: center;
+}
+
+/* JUDUL */
+.card-top h2 {
+  font-size: 1.6rem;
+  margin-bottom: 4px;
+  color: #1e3a8a;
+  letter-spacing: 1px;
+}
+
+/* SUBTITLE / NAMA */
+.subtitle {
+  font-size: 0.95rem;
+  color: #0369a1;
+  margin-bottom: 22px;
+  font-weight: 600;
+}
+
+/* FOTO POLAROID */
+.photos {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.photo {
+  background: #3e85a8;
+  padding: 7px 7px 16px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transform: rotate(-2deg);
+  transition: transform 0.3s ease;
+}
+
+.photo:nth-child(2) {
+  transform: rotate(2deg);
+}
+
+.photo:nth-child(3) {
+  transform: rotate(-1deg);
+}
+
+.photo:hover {
+  transform: scale(1.05);
+}
+
+.photo img {
+  width: 85px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* PESAN */
+.card-message p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: #1f2937;
+  text-align: left;
+}
+
+/* FOOTER */
+.footer {
+  margin-top: 22px;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #000000;
+}
+
+.footer a {
+  color: #2189ff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .card {
+    width: 92%;
+  }
+
+  .photo img {
+    width: 75px;
+    height: 100px;
+  }
+}
+
+.birthdate {
+  font-size: 0.5rem;
+  color: #1e40af;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+body {
+  background: #f2f5fa;
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  animation: fadeZoom 1.2s ease;
+}
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* WRAPPER ANIMASI LUCU */
+.cute-wrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* ITEM */
+.cute {
+  position: absolute;
+  bottom: -40px;
+  font-size: 1.8rem;
+  animation: floatCute 8s infinite ease-in;
+  opacity: 0.8;
+}
+
+/* POSISI & DELAY */
+.cute:nth-child(1) {
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.cute:nth-child(2) {
+  left: 40%;
+  animation-delay: 2s;
+}
+
+.cute:nth-child(3) {
+  left: 65%;
+  animation-delay: 4s;
+}
+
+.cute:nth-child(4) {
+  left: 85%;
+  animation-delay: 6s;
+}
+
+/* ANIMASI NAIK LUCU */
+@keyframes floatCute {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-50vh) scale(1.1) rotate(5deg);
+  }
+  100% {
+    transform: translateY(-110vh) scale(1) rotate(-5deg);
+    opacity: 0;
+  }
+}
+
+.card-top h2:hover {
+  animation: wiggle 0.5s ease;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-2deg); }
+  75% { transform: rotate(1deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 480px) {
+
+  .card {
+    width: 100%;
+    max-width: 340px;
+    padding: 22px 18px;
+    margin-top: 20px;
+  }
+
+  .card-top h2 {
+    font-size: 1.4rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  /* FOTO POLAROID */
+  .photos {
+    gap: 10px;
+  }
+
+  .photo img {
+    width: 70px;
+    height: 95px;
+  }
+
+  /* PESAN */
+  .card-message p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* FOOTER */
+  .footer {
+    margin-top: 18px;
+    font-size: 0.7rem;
+  }
+}
+
+/* TOMBOL MUSIK */
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  z-index: 10;
+}
+
+.music-btn:hover {
+  background: #1e40af;
+}
